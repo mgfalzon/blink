@@ -27,13 +27,13 @@ const Section = props => {
 
 // params: icon, size(boolean), accept, props.children(button) 
 const FileInput = props => {
-    const [show, setShow] = useState('invisible')
+    const [show, setShow] = useState(0)
     const [name, setName] = useState('')
     const [size, setSize] = useState('')
     const ref = useRef()
     const upload = () => {ref.current.click()}
     const handleUpload = event => {
-        setShow('')
+        setShow(1)
         const file = event.target.files[0]
         if (file) {
             setName(() =>
@@ -52,8 +52,8 @@ const FileInput = props => {
     return (
         <>
             {React.cloneElement(props.children, {onClick: upload})}
-            <div className={'d-flex align-items-center mt-5 rounded p-3 ' + show} 
-                style={{border: '2px solid #d5e1f8', width: '90%'}}
+            <div className='d-flex align-items-center mt-5 rounded p-3'
+                style={{border: '2px solid #d5e1f8', width: '90%', opacity: show, transition: 'all .8s'}}
             >
                 {React.createElement(props.icon, {className: 'mr-3', size: 25, style: {color: '#9ca5b6'}})}
                 <span>{name}</span>
