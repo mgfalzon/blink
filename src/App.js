@@ -5,7 +5,7 @@ import './Style.css'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 
-const App = p => (
+const App = () => (
     <Router>
       <Navbar />
       <Switch>

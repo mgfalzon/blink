@@ -37,7 +37,7 @@ body {
 .arrow {
     font-size: 18px;
     color: #e95f62 !important;
-    animation: arrow 4s linear 2s infinite;
+    animation: arrow 3s linear 1s infinite;
   }
 @keyframes arrow {
     0%   {transform: translateY(0px)}
