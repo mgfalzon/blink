@@ -87,7 +87,7 @@ const Home = () => {
     return (
         <Container fluid>
             <Section title='Blink Resume' header
-                src={require('../Assets/bg4.png')}
+                src={require('../Assets/bg.png')}
                 desc="Combine a video introduction with your text resume to create
                 the most powerful impression on potential empolyers."
                 style={{minHeight: '90vh', maxHeight: '90vh'}}
