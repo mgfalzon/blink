@@ -13,7 +13,7 @@ const Section = props => {
     )
     const header = props.header && 'display-4'
     return (
-        <Row md={2} sm={1} className={`px-5 ${props.className}`} style={props.style}>
+        <Row md={2} sm={1} id={props.id} className={`px-5 ${props.className}`} style={props.style}>
             {props.reverse && Img}
             <Col className={`pl-5 ${!header && 'my-auto'}`} md={5}>
                 <h3 className={`pt-5 font-weight-bold ${header}`}>{props.title}</h3>
@@ -94,7 +94,7 @@ const Home = () => {
                 className='pt-5'
             >
                 <div className='d-flex'>
-                    <Link href='#resume' offset='100'>
+                    <Link href='#resume' offset='75'>
                         <Button size='lg' className='red-btn mt-5'>Get started</Button>
                     </Link>
                     <div className='mx-3'/>
@@ -106,7 +106,7 @@ const Home = () => {
                 </div>
             </Section>
             <IconRow />
-            <Section title='Upload Your Resume' 
+            <Section title='Upload Your Resume' id='resume'
                 src={require('../Assets/resume.png')}
                 desc="The Blink Resume API connects a user's resume with their
                 short video introduction"
@@ -120,6 +120,7 @@ const Home = () => {
                 desc="Using your device's camera, record a short video introduction. 
                 Be professional, charismatic, and passionate to capture the 
                 attention of hiring managers."
+                className='pb-3'
             >
                 <div className='d-flex'>
                     <Button size='lg' className='red-btn mt-4'>Record</Button>
@@ -135,6 +136,7 @@ const Home = () => {
                 desc="Send your Blink Resume to hiring managers feeling
                 confident that you put your best foot forward and will 
                 stand out from the competition."
+                className='pt-5'
             >
                 <Button size='lg' className='red-btn mt-4'>Share</Button>
             </Section>
