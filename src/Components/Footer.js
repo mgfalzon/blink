@@ -65,7 +65,7 @@ const Footer = () => (
         <div className='d-flex justify-content-start py-5' 
             style={{position: "relative", marginLeft: "auto", marginRight: "auto"}}>
             <div className='text-left mr-5'>
-                <p className='text-uppercase pb-3' style={header}>Contact Us</p>
+                <p className='text-uppercase' style={header}>Contact Us</p>
                 <p className='font-weight-bold mb-1'>Blink Resume</p>
                 <p style={text}>
                     ​1901 Research Blvd<br/>
