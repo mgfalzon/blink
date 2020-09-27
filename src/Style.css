@@ -63,3 +63,13 @@ body {
     padding: 1.5rem;
     border-radius: 50%;
 }
+
+.tel-link {
+    color: #e95f62;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+}
+.tel-link:hover  {
+    color: #205e48;
+}

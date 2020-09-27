@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import{faInstagram,faTwitter,faFacebook} from "@fortawesome/free-brands-svg-icons"
 
@@ -8,62 +8,39 @@ const facebook_icon = {color: '#4968ad'}
 const instagram_icon = {margin: '0 1rem', color: '#e95f62'}
 const twitter_icon = {margin: '0 1rem', color: '#49a1eb'}
 
-const TelLink = (props) => {
-    const [color, setColor] = useState('#e95f62') 
-    return <a 
-        style={{
-            color: color,
-            fontWeight: 'bold',
-            borderBottom: '1px solid #000',
-            textDecoration: 'none',
-        }} 
-        href={'tel:' + props.children}
-        onMouseOver={() => setColor('#205e48')}
-        onMouseOut={() => setColor('#e95f62')}
-    >{props.children}</a>
-}
+const TelLink = props => (
+    <a className='tel-link' href={'tel:' + props.children}>{props.children}</a>
+)
 
-const SocialMedia = (props) => {
-    return <div className="social-container">
+const SocialLink = props => (
+    <a target="_blank" rel="noopener noreferrer" {...props}></a>
+)
 
-    <a
-    href="https://www.facebook.com/blinkresume/"
-    className="mr-3"
-    style={facebook_icon}
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-        <FontAwesomeIcon icon={faFacebook} size="2x"/>
-    </a>   
-     <a
-    href="https://www.instagram.com/blinkresumes/"
-    className="mr-3"
-    style={instagram_icon}
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-        <FontAwesomeIcon icon={faInstagram} size="2x"/>
-    </a>
-    <a
-    href="https://twitter.com/blinkresume"
-    className="twitterSocial"
-    style={twitter_icon}
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-        <FontAwesomeIcon icon={faTwitter} size="2x"/>
-    </a>
-</div>
-}
+const SocialMedia = () => (
+    <>
+        <SocialLink href="https://www.facebook.com/blinkresume/" className="mr-3" style={facebook_icon}>
+            <FontAwesomeIcon icon={faFacebook} size="2x"/>
+        </SocialLink>   
+        <SocialLink href="https://www.instagram.com/blinkresumes/" className="mr-3" style={instagram_icon}>
+            <FontAwesomeIcon icon={faInstagram} size="2x"/>
+        </SocialLink>   
+        <SocialLink href="https://www.twitter.com/blinkresumes/"  style={twitter_icon}>
+            <FontAwesomeIcon icon={faTwitter} size="2x"/>
+        </SocialLink>   
+    </>
+)
 
 const Footer = () => (
-   
-   <footer style={{backgroundColor: "gainsboro", filter: "brightness(109%)", 
-   borderRadius: "60% 60% 0% 0%", marginTop: 100, 
-   width: "100%", display: "flex"}}>
-       
+    <footer style={{
+       display: "flex",
+       width: "100%",
+       backgroundColor: "gainsboro", 
+       filter: "brightness(109%)", 
+       borderRadius: "60% 60% 0% 0%", marginTop: 100, 
+    }}>
         <div className='d-flex justify-content-start py-5' 
-            style={{position: "relative", marginLeft: "auto", marginRight: "auto"}}>
+            style={{position: "relative", marginLeft: "auto", marginRight: "auto"}}
+        >
             <div className='text-left mr-5'>
                 <p className='text-uppercase' style={header}>Contact Us</p>
                 <p className='font-weight-bold mb-1'>Blink Resume</p>
@@ -82,11 +59,11 @@ const Footer = () => (
             </div>
             <div className='text-left ml-5'>
                 <p className='text-uppercase' style={header}>Social Media</p>
-                <SocialMedia/>
+                <SocialMedia />
             </div>
         </div>
     </footer>
-    
+
 )
 
 export default Footer
