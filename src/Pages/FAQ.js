@@ -16,7 +16,7 @@ const Question = ({icon, question, answer}) => (
 
 const FAQ = () => (
     <>
-        <Image fluid className='pt-5 mb-5' src={require("./faq.png")} style={{height: 'auto', width: '50%', display: 'block' ,marginLeft: 'auto', marginRight: 'auto'}} /> 
+        <Image fluid className='pt-5 mb-5' src={require("../Assets/faq.png")} style={{height: 'auto', width: '50%', display: 'block' ,marginLeft: 'auto', marginRight: 'auto'}} /> 
         <Container fluid>
                 <Question icon={FaClock}
                     question="How long should a Blink be?"
