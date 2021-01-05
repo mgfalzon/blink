@@ -2,6 +2,8 @@ import React from 'react'
 import {Navbar, Nav, Image} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom'
 
+import '../Styles/Components/navbar.css'
+
 const MyNavbar = () => {
 
     const Link = props => (
@@ -12,8 +14,8 @@ const MyNavbar = () => {
     ) 
 
     return (
-        <Navbar className='w-100 py-3' style={{paddingRight: '6em', paddingLeft: '6em'}}>
-            <Image className='mr-3' src={require('../Assets/logo.png')} width={45} height={45} />
+        <Navbar className='w-100 py-3'>
+            <Image className='mr-3' src={require('../Assets/logo.png')} />
             <Navbar.Brand>Blink Resume</Navbar.Brand>
             <Nav className='ml-auto'>
                 <Link exact to='/'>Home</Link>

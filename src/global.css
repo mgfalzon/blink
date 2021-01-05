@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --red: #e95f62;
+    --dark-red: #e75053;
+    --grey: #d5e1f8;
+    --dark-grey: #c1d2f4 ;
+    --baby-blue: #dde8fc;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif !important;
+    background-color: #f8f9ff !important;
+}
+
+/* Colors */
+.bg-baby-blue {background-color: var(--baby-blue)}
+
+/* Buttons */
+.btn:focus {box-shadow: none !important}
+
+.btn.red {
+    border-radius: 20px !important;
+    background-color: var(--red) !important;
+    border-color:  var(--red) !important;
+}
+.btn.red:hover {
+    background-color: var(--dark-red) !important;
+    border-color:  var(--dark-red) !important;
+}
+
+.btn.grey {
+    border-radius: 20px !important;
+    background-color: var(--grey) !important;
+    border-color:  var(--grey) !important;
+    color: #9ca5b6 !important;
+}
+.btn.grey:hover {
+    background-color: var(--dark-grey) !important;
+    border-color:  var(--dark-grey) !important;
+}

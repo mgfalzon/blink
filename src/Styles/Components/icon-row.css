@@ -1,0 +1,22 @@
+.row img {object-fit: cover}
+
+.icon-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+}
+.icon-col p {font-size: 18px}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    color: white;
+    font-size: 64px;
+    width: 100px;
+    height: 100px;
+    padding: 1.5rem;
+    border-radius: 50%;
+}

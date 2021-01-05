@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {BrowserView, MobileView} from 'react-device-detect'
 
-import './Style.css'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import FAQ from './Pages/FAQ'

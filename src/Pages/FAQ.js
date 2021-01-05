@@ -2,8 +2,10 @@ import React from 'react'
 import {Container, Row, Col, Image} from 'react-bootstrap'
 import {FaClock, FaComment, FaDollarSign} from 'react-icons/fa'
 
+import '../Styles/Pages/faq.css'
+
 const Question = ({icon, question, answer}) => (
-    <Row className="mt-5 mx-5 py-5 align-items-center" style={{backgroundColor: "#dde8fc", borderRadius: 35}}>
+    <Row className="question mt-5 mx-5 py-5 align-items-center">
         <Col className='icon-col' md={2}>
             <div className='circle mt-3'>{React.createElement(icon)}</div>
         </Col>
@@ -16,7 +18,7 @@ const Question = ({icon, question, answer}) => (
 
 const FAQ = () => (
     <>
-        <Image fluid className='pt-5 mb-5' src={require("../Assets/faq.png")} style={{height: 'auto', width: '50%', display: 'block' ,marginLeft: 'auto', marginRight: 'auto'}} /> 
+        <Image fluid className='d-block w-50 mx-auto py-5' src={require("../Assets/faq.png")} /> 
         <Container fluid>
                 <Question icon={FaClock}
                     question="How long should a Blink be?"
