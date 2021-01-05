@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    background-color: var(--baby-blue);
+    border-radius: 50% 50% 0 0;
+    margin-top: 100px;
+}
+
+/* Text */
+.header {
+    color: #3f3f3f;
+    font-weight: bold;
+}
+.text {
+    color:'#32a2a2a'; 
+    font-size: 13;
+}
+
+/* Icons */
+.facebook-icon {color: #4968ad}
+.instagram-icon {margin: 0 1rem; color: #e95f62}
+.twitter-icon {margin: 0 1rem; color: #49a1eb}
+
+/* Telephone Link */
+.tel-link {
+    color: var(--red);
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    text-decoration: none !important;
+}
+.tel-link:hover  {
+    color: var(--dark-red);
+}

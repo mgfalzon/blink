@@ -1,0 +1,23 @@
+/* Scroll Reminder */
+.arrow {
+    font-size: 18px;
+    color: var(--red) !important;
+    animation: arrow 3s linear 1s infinite;
+}
+@keyframes arrow {
+    0%   {transform: translateY(0px)}
+    10% {transform: translateY(3px)}
+    25% {transform: translateY(0px)}
+    100% {transform: translateY(0px)}
+}
+
+/* File Input */
+.io-border {
+    border: 2px solid var(--grey);
+    width: 90%;
+    transition: all 1s;
+    opacity: 0;
+}
+.io-border.show {
+    opacity: 1;
+}

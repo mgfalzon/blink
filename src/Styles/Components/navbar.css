@@ -1,0 +1,15 @@
+.navbar {
+    padding-right: 6em !important; 
+    padding-left: 6em !important;
+}
+.navbar > img {width: 45px; height: 45px}
+
+.nav-link {
+    color: #9c9d9c !important;
+}
+.nav-link:hover {
+    color: black !important;
+}
+.nav-link-active {
+    color: black !important;
+}

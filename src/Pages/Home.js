@@ -4,6 +4,7 @@ import {FaArrowCircleDown, FaFileAlt, FaFileVideo} from 'react-icons/fa'
 import Link from 'react-anchor-link-smooth-scroll'
 
 import IconRow from '../Components/IconRow'
+import '../Styles/Pages/home.css'
 
 const Section = props => {
     const Img = (
@@ -27,13 +28,13 @@ const Section = props => {
 
 // params: icon, size(boolean), accept, props.children(button) 
 const FileInput = props => {
-    const [show, setShow] = useState(0)
+    const [show, setShow] = useState('')
     const [name, setName] = useState('')
     const [size, setSize] = useState('')
     const ref = useRef()
     const upload = () => {ref.current.click()}
     const handleUpload = event => {
-        setShow(1)
+        setShow('show')
         const file = event.target.files[0]
         if (file) {
             setName(() =>
@@ -49,21 +50,17 @@ const FileInput = props => {
         */
     }
     
-    return (
-        <>
-            {React.cloneElement(props.children, {onClick: upload})}
-            <div className='d-flex align-items-center mt-5 rounded p-3'
-                style={{border: '2px solid #d5e1f8', width: '90%', opacity: show, transition: 'all .8s'}}
-            >
-                {React.createElement(props.icon, {className: 'mr-3', size: 25, style: {color: '#9ca5b6'}})}
-                <span>{name}</span>
-                {props.size &&
-                    <span className='flex-grow-1 d-flex justify-content-end'>{size}</span>
-                }
-                <input type="file" accept={props.accept} ref={ref} onChange={handleUpload} className='d-none' />
-            </div>
-        </>
-    )
+    return <>
+        {React.cloneElement(props.children, {onClick: upload})}
+        <div className={`d-flex align-items-center mt-5 rounded p-3 io-border ${show}`}        >
+            {React.createElement(props.icon, {className: 'mr-3', size: 25, style: {color: '#9ca5b6'}})}
+            <span>{name}</span>
+            {props.size &&
+                <span className='flex-grow-1 d-flex justify-content-end'>{size}</span>
+            }
+            <input type="file" accept={props.accept} ref={ref} onChange={handleUpload} className='d-none' />
+        </div>
+    </>
 }
 
 
@@ -95,10 +92,10 @@ const Home = () => {
             >
                 <div className='d-flex'>
                     <Link href='#resume' offset='75'>
-                        <Button size='lg' className='red-btn mt-5'>Get started</Button>
+                        <Button size='lg' className='red mt-5'>Get started</Button>
                     </Link>
                     <div className='mx-3'/>
-                    <Button href='/about' size='lg' className='grey-btn mt-5'>Learn more</Button>
+                    <Button href='/about' size='lg' className='grey mt-5'>Learn more</Button>
                 </div>
                 <div className='d-flex align-items-center h-50' style={{...scrollReminder, transition: 'all 1s'}}>
                     <FaArrowCircleDown className='arrow' />
@@ -112,7 +109,7 @@ const Home = () => {
                 short video introduction"
             >
                 <FileInput icon={FaFileAlt} size>
-                    <Button size='lg' className='grey-btn mt-4'>Upload Resume</Button>
+                    <Button size='lg' className='grey mt-4'>Upload Resume</Button>
                 </FileInput>
             </Section>
             <Section title='Add a Video Introduction' reverse 
@@ -123,9 +120,9 @@ const Home = () => {
                 className='pb-3'
             >
                 <div className='d-flex'>
-                    <Button size='lg' className='red-btn mt-4'>Record</Button>
+                    <Button size='lg' className='red mt-4'>Record</Button>
                     <div className='mx-3'/>
-                    <Button size='lg' className='grey-btn mt-4' onClick={() => videoUpload.current.click()}>Upload</Button>
+                    <Button size='lg' className='grey mt-4' onClick={() => videoUpload.current.click()}>Upload</Button>
                 </div>
                 <FileInput icon={FaFileVideo} accept='video/*'>
                     <input className='d-none' ref={videoUpload} />
@@ -138,7 +135,9 @@ const Home = () => {
                 stand out from the competition."
                 className='pt-5'
             >
-                <Button size='lg' className='red-btn mt-4'>Share</Button>
+                <Button size='lg' className='red mt-4'
+                    href='mailto:?subject=My BlinkResume is Attached&body= Follow this URL to view my BlinkResume: '
+                >Share</Button>
             </Section>
         </Container>
     )
