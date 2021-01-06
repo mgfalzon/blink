@@ -14,7 +14,7 @@ const Vision = () => (
                 Blink Resume is <span className='blue'>redefining</span> the hiring process
                 </h1>  
         </div>
-        <div className='d-flex flex-fill px-3'>
+        <div className='d-flex flex-fill px-1 mx-4'>
             <div className='px-2'>  
                 <GiBullseye />
                 <h3>1.</h3>
