@@ -1,6 +1,6 @@
 import React from 'react'
-import {Row, Col, Image} from 'react-bootstrap'
-import {FaCamera, FaPalette, FaShareSquare} from 'react-icons/fa'
+import { Row, Col, Image } from 'react-bootstrap'
+import { FaCamera, FaPalette, FaShareSquare } from 'react-icons/fa'
 
 import '../Styles/Components/icon-row.css'
 

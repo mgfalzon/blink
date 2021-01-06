@@ -7,6 +7,7 @@
     --grey: #d5e1f8;
     --dark-grey: #c1d2f4 ;
     --baby-blue: #dde8fc;
+    --blue: #6495ed;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 }
 
 /* Colors */
+.blue {color: var(--blue)}
 .bg-baby-blue {background-color: var(--baby-blue)}
 
 /* Buttons */

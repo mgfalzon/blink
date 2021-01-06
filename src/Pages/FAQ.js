@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container, Row, Col, Image} from 'react-bootstrap'
-import {FaClock, FaComment, FaDollarSign} from 'react-icons/fa'
+import { Container, Row, Col, Image } from 'react-bootstrap'
+import { FaClock, FaComment, FaDollarSign } from 'react-icons/fa'
 
 import '../Styles/Pages/faq.css'
 

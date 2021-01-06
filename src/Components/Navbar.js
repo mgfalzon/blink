@@ -1,6 +1,6 @@
 import React from 'react'
-import {Navbar, Nav, Image} from 'react-bootstrap'
-import {NavLink} from 'react-router-dom'
+import { Navbar, Nav, Image } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 import '../Styles/Components/navbar.css'
 
