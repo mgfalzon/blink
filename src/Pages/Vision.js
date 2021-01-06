@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
 import { GiBullseye } from 'react-icons/gi'
 import { ImEye } from 'react-icons/im'
 import { FaPeopleCarry } from 'react-icons/fa'
@@ -8,9 +8,12 @@ import '../Styles/Pages/vision.css'
 
 const Vision = () => (
     <div className='px-3'>
-        <h1 className='display-4 text-center font-weight-bold p-5'>
-            Blink Resume is <span className='blue'>redefining</span> the hiring process
-        </h1>
+        <div className="d-flex flex-row bd-highlight mb-3 align-items-center">
+                <Image fluid className='d-block w-50 mx-auto py-5' src={require("../Assets/Vision2.png")} />
+                <h1 className='display-4 text-center font-weight-bold p-5 '>
+                Blink Resume is <span className='blue'>redefining</span> the hiring process
+                </h1>
+        </div>
         <div className='d-flex flex-fill px-3'>
             <div className='px-2'>  
                 <GiBullseye />
