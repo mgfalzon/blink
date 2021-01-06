@@ -6,18 +6,18 @@ import Link from 'react-anchor-link-smooth-scroll'
 import IconRow from '../Components/IconRow'
 import '../Styles/Pages/home.css'
 
+// params: src, id, title, desc, children, reverse(boolean)
 const Section = props => {
     const Img = (
         <Col md={7}>
-            <Image fluid className='pt-5' src={props.src}  />
+            <Image fluid className='pt-5' src={props.src} />
         </Col>
     )
-    const header = props.header && 'display-4'
     return (
-        <Row md={2} sm={1} id={props.id} className={`px-5 ${props.className}`} style={props.style}>
+        <Row md={2} sm={1} id={props.id} className={`px-5 ${props.className}`}>
             {props.reverse && Img}
-            <Col className={`pl-5 ${!header && 'my-auto'}`} md={5}>
-                <h3 className={`pt-5 font-weight-bold ${header}`}>{props.title}</h3>
+            <Col className='pl-5 my-auto' md={5}>
+                <h3 className='pt-5 font-weight-bold'>{props.title}</h3>
                 <p>{props.desc}</p>
                 {props.children}
             </Col>
@@ -26,7 +26,7 @@ const Section = props => {
     )
 }
 
-// params: icon, size(boolean), accept, props.children(button) 
+// params: icon, size(boolean), accept, child(button) 
 const FileInput = props => {
     const [show, setShow] = useState('')
     const [name, setName] = useState('')
@@ -37,12 +37,10 @@ const FileInput = props => {
         setShow('show')
         const file = event.target.files[0]
         if (file) {
-            setName(() =>
-                file.name.length > 25 ?
-                    `${file.name.substring(0, 25)}...`
-                    : file.name
+            setName(file.name.length > 25 ?
+                file.name.substring(0, 25) + '...' : file.name
             )
-            setSize(`${(file.size * .001).toFixed(2)} KB`)
+            setSize((file.size * .001).toFixed(2) + ' KB')
         }
         /*
             pass a function as props here for an API call
@@ -52,17 +50,15 @@ const FileInput = props => {
     
     return <>
         {React.cloneElement(props.children, {onClick: upload})}
-        <div className={`d-flex align-items-center mt-5 rounded p-3 io-border ${show}`}        >
-            {React.createElement(props.icon, {className: 'mr-3', size: 25, style: {color: '#9ca5b6'}})}
-            <span>{name}</span>
-            {props.size &&
-                <span className='flex-grow-1 d-flex justify-content-end'>{size}</span>
-            }
+        <div className={`d-flex align-items-center mt-5 p-3 rounded io-border ${show}`}>
+            {[
+                React.createElement(props.icon, {className: 'file-icon mr-3'}), name,
+                props.size && <span className='d-flex flex-grow-1 justify-content-end'>{size}</span>
+            ]}
             <input type="file" accept={props.accept} ref={ref} onChange={handleUpload} className='d-none' />
         </div>
     </>
 }
-
 
 const Home = () => {
 
@@ -73,9 +69,7 @@ const Home = () => {
         return window.addEventListener('scroll', handleScroll)
     }, [])
     const handleScroll = () => {
-        setScrollReminder({
-            opacity: window.pageYOffset === 0 ? 1 : 0
-        })
+        setScrollReminder({opacity: window.pageYOffset === 0 ? 1 : 0})
     }
 
     // videoUpload Ref (work around for making FileInput more flexible)
@@ -83,12 +77,11 @@ const Home = () => {
 
     return (
         <Container fluid>
-            <Section title='Blink Resume' header
+            <Section title='Blink Resume'
                 src={require('../Assets/bg.png')}
                 desc="Combine a video introduction with your text resume to create
                 the most powerful impression on potential empolyers."
-                style={{minHeight: '90vh', maxHeight: '90vh'}}
-                className='pt-5'
+                className='main-header pt-5'
             >
                 <div className='d-flex'>
                     <Link href='#resume' offset='75'>
@@ -102,7 +95,9 @@ const Home = () => {
                     <span className='ml-2'>Scroll Down</span>
                 </div>
             </Section>
+
             <IconRow />
+
             <Section title='Upload Your Resume' id='resume'
                 src={require('../Assets/resume.png')}
                 desc="The Blink Resume API connects a user's resume with their
@@ -112,6 +107,7 @@ const Home = () => {
                     <Button size='lg' className='grey mt-4'>Upload Resume</Button>
                 </FileInput>
             </Section>
+
             <Section title='Add a Video Introduction' reverse 
                 src={require('../Assets/record.png')}
                 desc="Using your device's camera, record a short video introduction. 
@@ -128,6 +124,7 @@ const Home = () => {
                     <input className='d-none' ref={videoUpload} />
                 </FileInput>
             </Section>
+
             <Section title='Share Your Blink Resume' 
                 src={require('../Assets/send.png')}
                 desc="Send your Blink Resume to hiring managers feeling
@@ -139,6 +136,7 @@ const Home = () => {
                     href='mailto:?subject=My BlinkResume is Attached&body= Follow this URL to view my BlinkResume: '
                 >Share</Button>
             </Section>
+
         </Container>
     )
 }

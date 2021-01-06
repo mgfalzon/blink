@@ -1,3 +1,11 @@
+/* Main Header */
+.main-header {
+    min-height: 90vh;
+    max-height: 90vh;
+}
+.main-header >* h3 {font-size: 3.5rem}
+.main-header > div {margin: 0 !important}
+
 /* Scroll Reminder */
 .arrow {
     font-size: 18px;
@@ -20,4 +28,9 @@
 }
 .io-border.show {
     opacity: 1;
+}
+
+.file-icon {
+    font-size: 25px;
+    color: #9ca5b6;
 }
