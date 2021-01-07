@@ -7,10 +7,10 @@ import Home from './Pages/Home';
 import Vision from './Pages/Vision';
 import FAQ from './Pages/FAQ';
 
-import './browser.css'
+import './desktop.css'
 
-const BrowserApp = () => 
-<div className='browser'>
+const DesktopApp = () => 
+<div className='dekstop'>
     <Router>
         <Navbar />
         <Switch>
@@ -22,4 +22,4 @@ const BrowserApp = () =>
     <Footer />
 </div>
 
-export default BrowserApp;
+export default DesktopApp;
