@@ -1,0 +1,20 @@
+:root {
+    --color0: #f3f9ff;
+    --color1: #b7c9dc;
+    --color2: #8286a3; 
+    --color3: #4a4d5f;
+}
+
+body .mobile {
+    background-color: white;
+}
+
+.mobile h1, h2, h3, h4, h5, h6 {
+  color: var(--color3)
+}
+
+.mobile p, small {
+    color: var(--color2)
+}
+
+.mobile .btn {border-radius: 1rem !important}

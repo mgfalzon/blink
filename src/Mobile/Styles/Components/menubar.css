@@ -1,0 +1,11 @@
+.menubar {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: var(--color0);
+}
+.link {
+    color: var(--color1) !important;
+}
+.link-active {
+    color: var(--color3) !important;
+}

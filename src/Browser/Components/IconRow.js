@@ -14,7 +14,7 @@ const IconCol = ({icon, name, desc}) => (
 
 const IconRow = () => <>
     <Row>
-        <Image fluid src={require('../Assets/waveTop2.png')}  />
+        <Image fluid src={require('../../Assets/waveTop2.png')}  />
     </Row>
     <Row className='d-flex flex-fill py-4 bg-baby-blue'>
         <IconCol icon={FaCamera} name='Record'
@@ -28,7 +28,7 @@ const IconRow = () => <>
         />
     </Row>
     <Row>
-        <Image fluid src={require('../Assets/waveBottom.png')} />
+        <Image fluid src={require('../../Assets/waveBottom.png')} />
     </Row>
 </>
 

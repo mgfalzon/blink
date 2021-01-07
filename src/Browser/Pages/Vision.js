@@ -8,9 +8,9 @@ import '../Styles/Pages/vision.css'
 
 const Vision = () => (
     <div className='px-3'>
-        <div className="d-flex flex-row bd-highlight mb-3 align-items-center">
-                <Image fluid className='d-block w-50 mx-auto py-2' src={require("../Assets/Vision2.png")} />
-                <h1 className='display-4 text-center font-weight-bold p-5 '>
+        <div className="d-flex align-items-center mb-3">
+                <Image fluid className='d-block w-50 mx-auto py-2' src={require("../../Assets/Vision2.png")} />
+                <h1 className='display-4 text-center font-weight-bold p-5'>
                 Blink Resume is <span className='blue'>redefining</span> the hiring process
                 </h1>  
         </div>

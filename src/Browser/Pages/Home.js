@@ -4,6 +4,7 @@ import { FaArrowCircleDown, FaFileAlt, FaFileVideo } from 'react-icons/fa'
 import Link from 'react-anchor-link-smooth-scroll'
 
 import IconRow from '../Components/IconRow'
+import { home as data } from '../../data'
 import '../Styles/Pages/home.css'
 
 // params: src, id, title, desc, children, reverse(boolean)
@@ -78,7 +79,7 @@ const Home = () => {
     return (
         <Container fluid>
             <Section title='Blink Resume'
-                src={require('../Assets/bg.png')}
+                src={require('../../Assets/bg.png')}
                 desc="Combine a video introduction with your text resume to create
                 the most powerful impression on potential empolyers."
                 className='main-header pt-5'
@@ -88,7 +89,7 @@ const Home = () => {
                         <Button size='lg' className='red mt-5'>Get started</Button>
                     </Link>
                     <div className='mx-3'/>
-                    <Button href='/about' size='lg' className='grey mt-5'>Learn more</Button>
+                    <Button href='/about' size='lg' className='mt-5'>Learn more</Button>
                 </div>
                 <div className='d-flex align-items-center h-50' style={{...scrollReminder, transition: 'all 1s'}}>
                     <FaArrowCircleDown className='arrow' />
@@ -98,38 +99,33 @@ const Home = () => {
 
             <IconRow />
 
-            <Section title='Upload Your Resume' id='resume'
-                src={require('../Assets/resume.png')}
-                desc="The Blink Resume API connects a user's resume with their
-                short video introduction"
+            <Section title={data[0].title} id='resume'
+                src={require('../../Assets/resume.png')}
+                desc={data[0].desc}
             >
                 <FileInput icon={FaFileAlt} size>
-                    <Button size='lg' className='grey mt-4'>Upload Resume</Button>
+                    <Button size='lg' className='mt-4'>Upload Resume</Button>
                 </FileInput>
             </Section>
 
-            <Section title='Add a Video Introduction' reverse 
-                src={require('../Assets/record.png')}
-                desc="Using your device's camera, record a short video introduction. 
-                Be professional, charismatic, and passionate to capture the 
-                attention of hiring managers."
+            <Section title={data[1].title} reverse 
+                src={require('../../Assets/record.png')}
+                desc={data[1].desc}
                 className='pb-3'
             >
                 <div className='d-flex'>
                     <Button size='lg' className='red mt-4'>Record</Button>
                     <div className='mx-3'/>
-                    <Button size='lg' className='grey mt-4' onClick={() => videoUpload.current.click()}>Upload</Button>
+                    <Button size='lg' className='mt-4' onClick={() => videoUpload.current.click()}>Upload</Button>
                 </div>
                 <FileInput icon={FaFileVideo} accept='video/*'>
                     <input className='d-none' ref={videoUpload} />
                 </FileInput>
             </Section>
 
-            <Section title='Share Your Blink Resume' 
-                src={require('../Assets/send.png')}
-                desc="Send your Blink Resume to hiring managers feeling
-                confident that you put your best foot forward and will 
-                stand out from the competition."
+            <Section title={data[2].title}
+                src={require('../../Assets/send.png')}
+                desc={data[2].desc}
                 className='pt-5'
             >
                 <Button size='lg' className='red mt-4'

@@ -1,0 +1,21 @@
+.mobile .nav-pills {
+    background-color: var(--color0) !important;
+    border-radius: 1rem;
+}
+
+.mobile .nav-link { 
+    margin: .5rem;
+    background-color: var(--color0);
+    color: var(--color1) !important;
+    border-radius: 1rem !important;
+}
+.mobile .nav-link.active {
+    background-color: white !important;
+    color: var(--color3) !important;
+    font-weight: bold;
+    box-shadow: 0 .125rem 1rem rgba(0,0,0,.075);
+}
+
+.mobile .tab-content {
+    padding: 1.8rem 1.5rem;
+}

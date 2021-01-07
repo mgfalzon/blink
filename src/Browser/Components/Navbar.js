@@ -15,7 +15,7 @@ const MyNavbar = () => {
 
     return (
         <Navbar className='w-100 py-3'>
-            <Image className='mr-3' src={require('../Assets/logo.png')} />
+            <Image className='mr-3' src={require('../../Assets/logo.png')} />
             <Navbar.Brand>Blink Resume</Navbar.Brand>
             <Nav className='ml-auto'>
                 <Link exact to='/'>Home</Link>
