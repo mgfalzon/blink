@@ -3,13 +3,12 @@
 
 :root {
     --grey: #d5e1f8;
-    --dark-grey: #c1d2f4 ;
+    --dark-grey: #c1d2f4;
     --grey-text: #9ca5b6;
-    --red: #e95f62;
+    --redColor: #e95f62; /* Naming b/c bootstrap overrides */
     --dark-red: #e75053;
-    --yellow: #fa9746;
     --baby-blue: #dde8fc;
-    --blue: #6495ed;
+    --blueColor: #6495ed; /* Naming b/c bootstrap overrides */
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 
 /* Colors */
-.blue {color: var(--blue)}
+.blue {color: var(--blueColor)}
 .bg-baby-blue {background-color: var(--baby-blue)}
 .bg-grey {background-color: var(--grey)}
 
@@ -34,7 +33,7 @@ body {
 }
 
 .btn.red {
-    background-color: var(--red) !important;
+    background-color: var(--redColor) !important;
     color: white !important;
 }
 .btn.red:hover {
@@ -42,9 +41,9 @@ body {
 }
 
 .btn.blue {
-    background-color: var(--blue) !important;
+    background-color: var(--blueColor) !important;
     color: white !important;
 }
 .btn.blue:hover {
-    background-color: var(--blue) !important;
+    background-color: var(--blueColor) !important;
 }

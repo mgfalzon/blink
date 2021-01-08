@@ -3,6 +3,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap'
 
 import { faq as data } from '../../data'
 import '../Styles/Pages/faq.css'
+import { faq } from '../../Assets'
 
 const Question = ({icon, question, answer}) => (
     <Row className="question mt-5 mx-5 py-5 align-items-center">
@@ -18,7 +19,7 @@ const Question = ({icon, question, answer}) => (
 
 const FAQ = () => (
     <>
-        <Image fluid className='d-block w-50 mx-auto py-5' src={require("../../Assets/faq.png")} /> 
+        <Image fluid className='d-block w-50 mx-auto py-5' src={faq} /> 
         <Container fluid>
             {data.map(({icon, question, answer}) => <Question icon={icon} question={question} answer={answer} />)}
         </Container>

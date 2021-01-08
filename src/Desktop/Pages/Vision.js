@@ -5,11 +5,12 @@ import { ImEye } from 'react-icons/im'
 import { FaPeopleCarry } from 'react-icons/fa'
 
 import '../Styles/Pages/vision.css'
+import { vision } from '../../Assets'
 
 const Vision = () => (
     <div className='px-3'>
         <div className="d-flex align-items-center mb-3">
-                <Image fluid className='d-block w-50 mx-auto py-2' src={require("../../Assets/Vision2.png")} />
+                <Image fluid className='d-block w-50 mx-auto py-2' src={vision} />
                 <h1 className='display-4 text-center font-weight-bold p-5'>
                 Blink Resume is <span className='blue'>redefining</span> the hiring process
                 </h1>  

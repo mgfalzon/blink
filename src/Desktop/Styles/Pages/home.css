@@ -9,7 +9,7 @@
 /* Scroll Reminder */
 .arrow {
     font-size: 18px;
-    color: var(--red) !important;
+    color: var(--redColor) !important;
     animation: arrow 3s linear 1s infinite;
 }
 @keyframes arrow {

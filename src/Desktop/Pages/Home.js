@@ -6,6 +6,7 @@ import Link from 'react-anchor-link-smooth-scroll'
 import IconRow from '../Components/IconRow'
 import { home as data } from '../../data'
 import '../Styles/Pages/home.css'
+import { bg, resume, record, send } from '../../Assets'
 
 // params: src, id, title, desc, children, reverse(boolean)
 const Section = props => {
@@ -79,7 +80,7 @@ const Home = () => {
     return (
         <Container fluid>
             <Section title='Blink Resume'
-                src={require('../../Assets/bg.png')}
+                src={bg}
                 desc="Combine a video introduction with your text resume to create
                 the most powerful impression on potential empolyers."
                 className='main-header pt-5'
@@ -100,7 +101,7 @@ const Home = () => {
             <IconRow />
 
             <Section title={data[0].title} id='resume'
-                src={require('../../Assets/resume.png')}
+                src={resume}
                 desc={data[0].desc}
             >
                 <FileInput icon={FaFileAlt} size>
@@ -109,7 +110,7 @@ const Home = () => {
             </Section>
 
             <Section title={data[1].title} reverse 
-                src={require('../../Assets/record.png')}
+                src={record}
                 desc={data[1].desc}
                 className='pb-3'
             >
@@ -124,7 +125,7 @@ const Home = () => {
             </Section>
 
             <Section title={data[2].title}
-                src={require('../../Assets/send.png')}
+                src={send}
                 desc={data[2].desc}
                 className='pt-5'
             >

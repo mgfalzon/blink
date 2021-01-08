@@ -3,6 +3,7 @@ import { Row, Col, Image } from 'react-bootstrap'
 import { FaCamera, FaPalette, FaShareSquare } from 'react-icons/fa'
 
 import '../Styles/Components/icon-row.css'
+import { waveTop, waveBottom } from '../../Assets'
 
 const IconCol = ({icon, name, desc}) => (
     <Col className='icon-col'>
@@ -14,7 +15,7 @@ const IconCol = ({icon, name, desc}) => (
 
 const IconRow = () => <>
     <Row>
-        <Image fluid src={require('../../Assets/waveTop2.png')}  />
+        <Image fluid src={waveTop}  />
     </Row>
     <Row className='d-flex flex-fill py-4 bg-baby-blue'>
         <IconCol icon={FaCamera} name='Record'
@@ -28,7 +29,7 @@ const IconRow = () => <>
         />
     </Row>
     <Row>
-        <Image fluid src={require('../../Assets/waveBottom.png')} />
+        <Image fluid src={waveBottom} />
     </Row>
 </>
 

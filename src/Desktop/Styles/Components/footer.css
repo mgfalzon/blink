@@ -22,7 +22,7 @@ footer {
 
 /* Telephone Link */
 .tel-link {
-    color: var(--red);
+    color: var(--redColor);
     font-weight: bold;
     border-bottom: 1px solid black;
     text-decoration: none !important;
