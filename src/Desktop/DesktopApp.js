@@ -11,7 +11,7 @@ import './desktop.css'
 
 const DesktopApp = () => 
 <div className='dekstop'>
-    <Router>
+    <Router basename='/blink'>
         <Navbar />
         <Switch>
         <Route exact component={Home} path='/' />

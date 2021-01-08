@@ -10,7 +10,7 @@ import './mobile.css'
 
 const MobileApp = () => 
 <div className='mobile'>
-    <Router>
+    <Router basename='/blink'>
         <Switch>
             <Route exact component={Home} path='/' />
             <Route exact component={FAQ} path='/faq' />
