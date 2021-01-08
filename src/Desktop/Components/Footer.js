@@ -26,7 +26,7 @@ const SocialMedia = () => <>
 
 const Footer = () => (
     <footer>
-        <div className='d-flex justify-content-center py-5'>
+        <div className='d-flex justify-content-center mx-auto py-5'>
             <div className='text-left mr-5'>
                 <p className='header text-uppercase'>Contact Us</p>
                 <p className='font-weight-bold mb-1'>Blink Resume</p>
